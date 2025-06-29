@@ -1,0 +1,139 @@
+// Importando el archivo de variables
+@import 'utils/variables';
+
+/* Reseteo los Estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Seteo los Estilos Genéricos de los Elementos */
+html,
+body {
+    height: 100%;
+    background-color: $body-bg;
+}
+
+.container-fullHeight {
+    height: 100vh;
+}
+
+/* Seteo los Estilos del Header y Nav */
+.bg-Lightgrey {
+    background-color: $gris-claro;
+}
+
+header {
+    height: $header-height;
+    
+    // Estilos de los Media Queries insertados directamente en el bloque
+    @media (max-width: 768px) {
+        height: unset;
+    }
+}
+
+main {
+    min-height: $main-min-height;
+
+    @media (max-width: 768px) {
+        // Estilos de los Media Queries insertados directamente en el bloque
+        height: unset;
+    }
+}
+
+nav {
+    margin: 0 5%;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    li {
+        display: block;
+        text-align: center;
+        padding-bottom: 10px;
+        width: 200px;
+
+        // Uso el ampersand (&) para referirme al selector parent 'li'
+        &.selected {
+            color: $negro;
+            border-bottom: $nav-border;
+            
+            // Estado hover para los links de los items seleccionados
+            a:hover {
+                color: $negro;
+            }
+        }
+
+        a {
+            display: block;
+            color: $negro;
+            text-decoration: none;
+
+            &:hover {
+                color: $blanco;
+            }
+        }
+    }
+    
+    .nav-item:has(.active) {
+        border-bottom: $nav-border;
+    }
+}
+
+/* Seteo los Estilos del Contenedores Secundarios */
+a.link-button {
+    color: $blanco;
+    text-decoration: none;
+    display: block;
+    width: 50%;
+}
+
+// Hago extender el estilo de los links al botón del Formulario
+.formulario button {
+    @extend a, .link-button;
+    width: 100%;
+}
+
+/* Estilos del Formulario de Contacto */
+.formulario {
+    margin: 15px 20%;
+
+    input,
+    textarea {
+        border-radius: 5px;
+        border: none;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    button {
+        border: none;
+        width: 100%;
+    }
+}
+
+.btn.bg-primary.text-white:hover {
+    color: $negro !important;
+}
+
+/* Estilos del Footer */
+footer {
+    background-color: $bg-Gris-claro;
+
+    a {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none; 
+        }
+    }
+}
