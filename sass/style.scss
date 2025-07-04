@@ -1,5 +1,6 @@
-// Importando el archivo de variables
+// Importando el archivo de Utilidades
 @import 'utils/variables';
+@import 'utils/colores';
 
 /* Reseteo los Estilos */
 * {
@@ -93,6 +94,11 @@ a.link-button {
     text-decoration: none;
     display: block;
     width: 50%;
+
+    @media (max-width: 768px) {
+        // Estilos de los Media Queries insertados directamente en el bloque
+        width: max-content;
+    }
 }
 
 // Hago extender el estilo de los links al botón del Formulario

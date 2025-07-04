@@ -83,6 +83,11 @@ a.link-button, .formulario button {
   display: block;
   width: 50%;
 }
+@media (max-width: 768px) {
+  a.link-button, .formulario button {
+    width: max-content;
+  }
+}
 
 .formulario button {
   width: 100%;

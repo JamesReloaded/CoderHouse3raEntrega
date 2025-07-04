@@ -1,10 +1,5 @@
-// Defino variables de Colores
-$body-bg: slategrey;
-$bg-Gris-claro: lightgrey;
-$gris-claro: #F8F9FA;
-
-$negro: black;
-$blanco: white;
+// Importando los Colores
+@import 'colores';
 
 // Defino variables de Anchos y Altos
 $header-height: 7vh;
