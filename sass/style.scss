@@ -127,7 +127,13 @@ a.link-button {
     }
 }
 
-.btn.bg-primary.text-white:hover {
+.bg-primario,
+.btn.btn-primary {
+    background-color: $bg-Azul-Site !important;
+}
+
+.btn.bg-primario.text-white:hover,
+.btn.btn-primary.btn-lg:hover{
     color: $negro !important;
 }
 

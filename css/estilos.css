@@ -110,7 +110,13 @@ a.link-button, .formulario button {
   width: 100%;
 }
 
-.btn.bg-primary.text-white:hover {
+.bg-primario,
+.btn.btn-primary {
+  background-color: #2d5884 !important;
+}
+
+.btn.bg-primario.text-white:hover,
+.btn.btn-primary.btn-lg:hover {
   color: black !important;
 }
 
